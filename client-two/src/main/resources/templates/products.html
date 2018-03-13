@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Secured Page</title>
+</head>
+<body>
+    <h1>Secured Page</h1>
+    <ul th:each="product : ${products}">
+        <li th:text="${product}">Product Content</li>
+    </ul>
+    <br />
+    <a th:href="@{/logout}">Logout</a>
+</body>
+</html>

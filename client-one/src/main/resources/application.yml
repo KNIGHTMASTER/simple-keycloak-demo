@@ -1,0 +1,23 @@
+server:
+  port: 8081
+  context-path: /keycloak-client
+
+keycloak:
+  allow-any-hostname: true
+  auth-server-url: http://localhost:8080/auth
+  realm: springboot
+  public-client: true
+  resource: keycloak-client-id
+  security-constraints:
+  - auth-roles:
+    - user
+    security-collections:
+    - patterns:
+      - /products/*
+      
+spring:
+  devtools:
+    livereload:
+      enabled: true
+  thymeleaf:
+    cache: false
