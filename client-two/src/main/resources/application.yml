@@ -1,12 +1,21 @@
+spring:
+  devtools:
+    livereload:
+      enabled: true
+  thymeleaf:
+    cache: false
+
 server:
   port: 8082
   context-path: /keycloak-client
 
 keycloak:
+  credentials:
+    secret: 60b714aa-345a-4413-aaea-2fd2d00880e9
   allow-any-hostname: true
   auth-server-url: http://localhost:8080/auth
   realm: springboot
-  public-client: true
+  public-client: false
   resource: keycloak-client-id
   security-constraints:
   - auth-roles:
@@ -14,10 +23,5 @@ keycloak:
     security-collections:
     - patterns:
       - /products/*
-      
-spring:
-  devtools:
-    livereload:
-      enabled: true
-  thymeleaf:
-    cache: false
+  always-refresh-token: true
+  principal-attribute: preferred_username

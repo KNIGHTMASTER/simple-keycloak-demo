@@ -2,22 +2,54 @@ server:
   port: 8081
   context-path: /keycloak-client
 
-keycloak:
-  allow-any-hostname: true
-  auth-server-url: http://localhost:8080/auth
-  realm: springboot
-  public-client: true
-  resource: keycloak-client-id
-  security-constraints:
-  - auth-roles:
-    - user
-    security-collections:
-    - patterns:
-      - /products/*
-      
 spring:
   devtools:
     livereload:
       enabled: true
   thymeleaf:
     cache: false
+
+keycloak:
+
+#if confidential this will be required
+  credentials:
+    secret: 60b714aa-345a-4413-aaea-2fd2d00880e9
+
+  enable-basic-auth: false  
+  allow-any-hostname: true
+  auth-server-url: http://localhost:8080/auth
+  realm: springboot
+
+  #if confidential make this disabled
+  public-client: false
+
+  resource: keycloak-client-id
+  security-constraints:
+  - auth-roles:
+    - user
+    security-collections:
+    - name: Application  
+    - patterns:
+      - /products/*        
+    - name: static-resource
+    - patterns:
+      - /csss/*
+      - /fonts/*
+      - /js/*
+  - auth-roles:
+    - admin
+    security-collections:
+    - name: Admin Page
+    - patterns:
+      - /admin/*
+  principal-attribute: preferred_username
+  token-store: session #cookie also available
+  always-refresh-token: false
+
+
+#security:
+#  oauth2:
+#    client:
+      # clientId in keycloak
+      # clientSecret in keycloak
+#      clientSecret: 60b714aa-345a-4413-aaea-2fd2d00880e9

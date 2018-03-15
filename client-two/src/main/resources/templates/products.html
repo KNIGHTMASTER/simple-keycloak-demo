@@ -5,6 +5,7 @@
 </head>
 <body>
     <h1>Secured Page</h1>
+    <h2>Welcome <span th:text="${userName}">User Name</span></h2>
     <ul th:each="product : ${products}">
         <li th:text="${product}">Product Content</li>
     </ul>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title>Admin Pages</title>
+</head>
+<body>
+    <h1>This is Admin Page</h1>
+    <h2>Session Information</h2>
+    <br />
+    <div style="font-weight: bold">Access Token :</div><span th:text="${accessToken}"></span>
+    <div style="font-weight: bold">User : </div> <span th:text="${user}"></span>
+    <div style="font-weight: bold">Principal :</div> <span th:text="${principal}"></span>
+</body>
+</html>

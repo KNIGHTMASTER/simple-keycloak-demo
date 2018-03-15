@@ -1,0 +1,26 @@
+server:
+  port: 8083
+  context-path: /rest-app
+
+spring:
+  devtools:
+    livereload:
+      enabled: true
+  thymeleaf:
+    cache: false
+
+keycloak:
+  enable-basic-auth: false  
+  allow-any-hostname: true
+  auth-server-url: http://localhost:8080/auth
+  realm: springboot
+  bearer-only: true
+  cors: true
+
+  public-client: true
+
+  resource: keycloak-client-id
+
+  principal-attribute: preferred_username
+  token-store: session #cookie also available
+  always-refresh-token: false
