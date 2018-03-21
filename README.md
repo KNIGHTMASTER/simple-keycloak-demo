@@ -20,3 +20,9 @@ Client Two consume the protected Data from "/productFromAccessToken" via Token R
 
 ### Rest App
 Rest App is Simple Rest Application protected by Keycloak
+
+### Request Token
+<img src='https://github.com/KNIGHTMASTER/Resources/blob/master/SIMPLE%20KEYCLOAK%20DEMO/execute-via-access-token.png'/>
+
+### Access API via Access Token
+<img src='https://github.com/KNIGHTMASTER/Resources/blob/master/SIMPLE%20KEYCLOAK%20DEMO/request-token.png'/>
