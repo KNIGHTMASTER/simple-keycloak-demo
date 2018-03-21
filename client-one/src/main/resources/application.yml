@@ -28,7 +28,7 @@ keycloak:
   - auth-roles:
     - user
     security-collections:
-    - name: Application  
+    - name: Application
     - patterns:
       - /products/*        
     - name: static-resource
