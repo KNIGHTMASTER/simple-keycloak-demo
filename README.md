@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/KNIGHTMASTER/spring-zipkin-example.svg)](https://travis-ci.org/KNIGHTMASTER/spring-zipkin-example/)
+[![Build Status](https://travis-ci.org/KNIGHTMASTER/simple-keycloak-demo.svg?branch=master)](https://travis-ci.org/KNIGHTMASTER/simple-keycloak-demo)
 
 # simple-keycloak-demo
 SpringBoot Demo Application Integrated with KeyCloak 
