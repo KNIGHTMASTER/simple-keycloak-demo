@@ -15,8 +15,8 @@ All URL after path :"/admin/" will be accessible for role admin
 
 ### Client Two
 Client Two is Simple Web Application that will consume protected Data from `Rest-App`.
-Client Two consume the protected Data from "/productFromRest" using Native Adapter via API call
-Client Two consume the protected Data from "/productFromAccessToken" via Token Request. This example can be used by any programming languages especially that is not supported by keycloak adapters
+Client Two consume the protected Data from `/productFromRest` using Native Adapter via API call
+Client Two consume the protected Data from `/productFromAccessToken` via Token Request. This example can be used by any programming languages especially that is not supported by keycloak adapters
 
 ### Rest App
 Rest App is Simple Rest Application protected by Keycloak
